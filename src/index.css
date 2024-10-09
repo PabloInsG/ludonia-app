@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #131313;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  cursor: url('assets/arrowhead-rounded-outline.png'), auto;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.sidenav {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  background-color: #2f2f2f;
+  overflow-y: hidden;
+  transition: 0.5s;
+  padding-top: 0px;
+}
+
+.sidenav a{
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  width: 0px;
+  align-items: center;
+  margin-left: 25px;
+}
+
+a:hover{
+  cursor: url('assets/arrowhead-rounded-outline.png'), auto;
+}
