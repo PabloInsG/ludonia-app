@@ -21,12 +21,12 @@ export const Header = () => {
 
     return (
         <div className="flex flex-row absolute w-full z-10">
-                <div className="w-1/2 flex">
+                <div className="w-[100%] lg:w-1/2 flex justify-center lg:justify-normal">
                     <a className="!w-70" href="/">
-                    <img src={labLogo} className="size-52 ml-10" alt="Laboratio Dentes logo" />
+                    <img src={labLogo} className="size-52 lg:ml-10" alt="Laboratio Dentes logo" />
                     </a>
                 </div>
-                <div className="w-1/2 hidden flex-row-reverse mr-20 items-center">
+                <div className="lg:w-1/2 hidden flex-row-reverse mr-20 items-center">
                     <div className="menu">
                         <div id="mySidenav" className="sidenav flex flex-col items-center space-y-24 justify-center">
                             <a href="/maria-pazos" className="text-5xl text-gray-300 hover:text-white" id="a1">Maria Pazos</a>
