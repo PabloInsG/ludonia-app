@@ -1,18 +1,14 @@
-import './App.css'
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import './App.css';
 import { Header } from './components/Header.jsx';
 import { FollowMouse } from './components/FollowMouse.jsx';
-import dentadura from './assets/dentadura.jpg';
+import { WorksGrid } from './components/WorksGrid.jsx';
 
 function App() {
   return (
     <>
       <Header />
-      <div>
-        <div className="flex flex-row-reverse">
-          <img src={dentadura} className="w-2/3 -z-10 h-screen" alt="" />
-        </div>
+      <div className='flex items-center justify-center'>
+        <WorksGrid></WorksGrid>
       </div>
       <FollowMouse/>
     </>

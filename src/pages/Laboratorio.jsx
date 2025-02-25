@@ -1,12 +1,11 @@
 import '../App.css'
-//import gsap from 'gsap';
 //import { useGSAP } from '@gsap/react';
 //import * as HomePage from './pages/Home.jsx';
 import { Header } from '../components/Header.jsx';
 import { FollowMouse } from '../components/FollowMouse.jsx';
 import { MouseScroll } from '../components/MouseScroll.jsx';
 import { Footer } from '../components/Footer.jsx';
-import fondo from '../assets/dios.jpg';
+import fondo from '../assets/protesic.png';
 
 function App() {
   return (

@@ -26,7 +26,7 @@ export const Header = () => {
                     <img src={labLogo} className="size-52 ml-10" alt="Laboratio Dentes logo" />
                     </a>
                 </div>
-                <div className="w-1/2 flex flex-row-reverse mr-20 items-center">
+                <div className="w-1/2 hidden flex-row-reverse mr-20 items-center">
                     <div className="menu">
                         <div id="mySidenav" className="sidenav flex flex-col items-center space-y-24 justify-center">
                             <a href="/maria-pazos" className="text-5xl text-gray-300 hover:text-white" id="a1">Maria Pazos</a>

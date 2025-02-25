@@ -8,8 +8,8 @@ export const FollowMouse = () => {
         const {clientX, clientY} = event
         setPosition({x: clientX, y: clientY})
       }
-        window.addEventListener('pointermove', handleMove)
-      //cleanup del evento
+      window.addEventListener('pointermove', handleMove)
+
       return () => {
         window.removeEventListener('pointermove', handleMove)
       }
@@ -18,7 +18,7 @@ export const FollowMouse = () => {
     return (
       <>
       <div style={{
-        position: 'absolute',
+        position: 'fixed',
         border: 'solid 1px #FFF',
         borderRadius: '50%',
         opacity: 0.8,
