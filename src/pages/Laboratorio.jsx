@@ -5,7 +5,6 @@ import { Header } from '../components/Header.jsx';
 import { FollowMouse } from '../components/FollowMouse.jsx';
 import { MouseScroll } from '../components/MouseScroll.jsx';
 import { Footer } from '../components/Footer.jsx';
-import fondo from '../assets/protesic.png';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
       <Header />
       <div className='w-full h-full'>
         <div className="absolute -z-10 w-full">
-            <img src={fondo} className="w-full h-screen" alt="" />
+            <img src="" className="w-full h-screen" alt="" />
         </div>
         <div className="flex flex-col items-center justify-center h-full">
             <h1>Laboratorio</h1>
@@ -27,7 +26,7 @@ function App() {
             <p className="text-gray-400">Nos hemos especializado en sobredentaduras, prótesis completas personalizadas, prótesis híbridas y prótesis fijas sobre zirconio, disilicato de litio y metal cerámica.</p>
           </div>
           <div className="-z-10 w-full">
-            <img src={fondo} className="w-full h-screen" alt="" />
+            <img src="" className="w-full h-screen" alt="" />
           </div>
         <div className="w-full h-60 bg-black items-center flex flex-col">
           <div className="flex flex-col text-wrap w-1/2 space-y-6">
