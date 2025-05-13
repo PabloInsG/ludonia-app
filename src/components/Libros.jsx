@@ -1,19 +1,27 @@
 import { useState } from "react";
 import { Logo } from "./Logo"
 import { Menu } from "./Menu"
+import animales from "../assets/animales.webp"
+import frutas from "../assets/frutas.webp"
+import cocodrilo from "../assets/cocodrilo.webp"
+import luna from "../assets/luna.webp"
+import zapato from "../assets/zapato.webp"
+import arbol from "../assets/arbol.webp"
+import miau from "../assets/miau.webp"
+import cinco from "../assets/cinco.webp"
 
 export const Libros = () => {
     const [menu, setMenuOpened] = useState(false);
 
     const librosMap = [
-        {id: 1, nombre: "Animales", foto: "src/assets/animales.webp", url: "https://kalandraka.com/animales-castellano.html"},
-        {id: 2, nombre: "Frutas", foto: "src/assets/frutas.webp", url: "https://kalandraka.com/frutas-castellano.html"},
-        {id: 3, nombre: "Cocodrilo", foto: "src/assets/cocodrilo.webp", url: "https://kalandraka.com/cocodrilo-castellano.html"},
-        {id: 4, nombre: "Luna", foto: "src/assets/luna.webp", url: "https://kalandraka.com/luna-castellano.html"},
-        {id: 5, nombre: "Zapato", foto: "src/assets/zapato.webp", url: "https://kalandraka.com/zapato-castellano.html"},
-        {id: 6, nombre: "Arbol", foto: "src/assets/arbol.webp", url: "https://kalandraka.com/arbol-castellano.html"},
-        {id: 7, nombre: "Miau", foto: "src/assets/miau.webp", url: "https://kalandraka.com/miau-castellano.html"},
-        {id: 8, nombre: "Cinco", foto: "src/assets/cinco.webp", url: "https://kalandraka.com/cinco-castellano.html"}
+        {id: 1, nombre: "Animales", foto: `${animales}`, url: "https://kalandraka.com/animales-castellano.html"},
+        {id: 2, nombre: "Frutas", foto: `${frutas}`, url: "https://kalandraka.com/frutas-castellano.html"},
+        {id: 3, nombre: "Cocodrilo", foto: `${cocodrilo}`, url: "https://kalandraka.com/cocodrilo-castellano.html"},
+        {id: 4, nombre: "Luna", foto: `${luna}`, url: "https://kalandraka.com/luna-castellano.html"},
+        {id: 5, nombre: "Zapato", foto: `${zapato}`, url: "https://kalandraka.com/zapato-castellano.html"},
+        {id: 6, nombre: "Arbol", foto: `${arbol}`, url: "https://kalandraka.com/arbol-castellano.html"},
+        {id: 7, nombre: "Miau", foto: `${miau}`, url: "https://kalandraka.com/miau-castellano.html"},
+        {id: 8, nombre: "Cinco", foto: `${cinco}`, url: "https://kalandraka.com/cinco-castellano.html"}
     ]
     
     return (
