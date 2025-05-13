@@ -1,9 +1,0 @@
-{
-    "redirects": [
-        { "source": "/", "destination": "/index.html", "type": 200 },
-      { "source": "/maria-pazos", "destination": "/maria-pazos.html", "type": 200 },
-      { "source": "/cuidados", "destination": "/cuidados.html", "type": 200 },
-      { "source": "/trabajos", "destination": "/trabajos.html", "type": 200 },
-      { "source": "/laboratorio", "destination": "/laboratorio.html", "type": 200 }
-    ]
-  }
