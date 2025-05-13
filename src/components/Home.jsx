@@ -1,9 +1,9 @@
 import ReactLenis from 'lenis/react'
 import { Link } from 'react-router-dom'
-import canciones from "../assets/canciones.png"
-import actividades from "../assets/actividades.png"
-import libros from "../assets/libros.png"
-import instrumentos from "../assets/instrumentos.png"
+import canciones from "../assets/canciones.webp"
+import actividades from "../assets/actividades.webp"
+import libros from "../assets/libros.webp"
+import instrumentos from "../assets/instrumentos.webp"
 import { useRef, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 

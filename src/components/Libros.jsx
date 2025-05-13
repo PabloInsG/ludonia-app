@@ -6,14 +6,14 @@ export const Libros = () => {
     const [menu, setMenuOpened] = useState(false);
 
     const librosMap = [
-        {id: 1, nombre: "Animales", foto: "../assets/animales.jpg", url: "https://kalandraka.com/animales-castellano.html"},
-        {id: 2, nombre: "Frutas", foto: "../assets/frutas.jpg", url: "https://kalandraka.com/frutas-castellano.html"},
-        {id: 3, nombre: "Cocodrilo", foto: "../assets/cocodrilo.jpg", url: "https://kalandraka.com/cocodrilo-castellano.html"},
-        {id: 4, nombre: "Luna", foto: "../assets/luna.jpg", url: "https://kalandraka.com/luna-castellano.html"},
-        {id: 5, nombre: "Zapato", foto: "../assets/zapato.jpg", url: "https://kalandraka.com/zapato-castellano.html"},
-        {id: 6, nombre: "Arbol", foto: "../assets/arbol.jpg", url: "https://kalandraka.com/arbol-castellano.html"},
-        {id: 7, nombre: "Miau", foto: "../assets/miau.jpg", url: "https://kalandraka.com/miau-castellano.html"},
-        {id: 8, nombre: "Cinco", foto: "../assets/cinco.jpg", url: "https://kalandraka.com/cinco-castellano.html"}
+        {id: 1, nombre: "Animales", foto: "src/assets/animales.webp", url: "https://kalandraka.com/animales-castellano.html"},
+        {id: 2, nombre: "Frutas", foto: "src/assets/frutas.webp", url: "https://kalandraka.com/frutas-castellano.html"},
+        {id: 3, nombre: "Cocodrilo", foto: "src/assets/cocodrilo.webp", url: "https://kalandraka.com/cocodrilo-castellano.html"},
+        {id: 4, nombre: "Luna", foto: "src/assets/luna.webp", url: "https://kalandraka.com/luna-castellano.html"},
+        {id: 5, nombre: "Zapato", foto: "src/assets/zapato.webp", url: "https://kalandraka.com/zapato-castellano.html"},
+        {id: 6, nombre: "Arbol", foto: "src/assets/arbol.webp", url: "https://kalandraka.com/arbol-castellano.html"},
+        {id: 7, nombre: "Miau", foto: "src/assets/miau.webp", url: "https://kalandraka.com/miau-castellano.html"},
+        {id: 8, nombre: "Cinco", foto: "src/assets/cinco.webp", url: "https://kalandraka.com/cinco-castellano.html"}
     ]
     
     return (
