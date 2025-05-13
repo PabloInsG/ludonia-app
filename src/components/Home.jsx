@@ -24,10 +24,10 @@ export const Home = () => {
   return (
     <>
         <div className="fixed -z-10 flex w-full h-[100vh]">
-                    <div className="w-1/3 flex flex-col justify-between bg-[#091F92]">
+                    <div className="lg:w-1/3 w-0 flex flex-col justify-between lg:bg-[#091F92]">
                         <div className="!w-70 h-1/2 flex flex-col justify-center gap-y-2">
-                            <h1 className='text-8xl text-center text-white'>LUDONÍA</h1>
-                            <p className='text-center text-xl '>Donde el juego y la música crean magia.</p>
+                            <h1 className='text-8xl text-center text-white opacity-100'>LUDONÍA</h1>
+                            <p className='lg:text-center text-xl '>Donde el juego y la música crean magia.</p>
                         </div>
                         <div className="flex items-center ml-12 mb-10">
                             <div className="w-8">
@@ -42,15 +42,19 @@ export const Home = () => {
                         </div>
                     </div>
                     <CSSTransition nodeRef={targetRef} in={propIn} timeout={500} classNames={"my-node"}>
-                        <div ref={targetRef} className="w-2/3 opacity-50" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
+                        <div ref={targetRef} className="lg:w-2/3 w-full lg:opacity-50" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
                         </div>
                     </CSSTransition>
         </div>
-        <div className="z-10 h-[100vh] items-center" id="example">
+        <div className="z-20 lg:h-[100vh] items-center" id="example">
             <ReactLenis root="true" id="lenis" options={{ smooth: true, orientation: "horizontal",  }} >
                 {imgData.map((image) => (
                     <Link className="link" key={image.id} to={image.link} >
-                        <h1 className={bgImage === image.src ? 'textHover hover:scale-105 transition duration-700' : 'textNormal hover:scale-105 transition duration-700'} onMouseEnter={() => {
+                        <h1 className={bgImage === image.src ? 'textHover hover:scale-105 transition duration-700' : 'textNormal hover:scale-105 transition duration-700'} onTouchStart={() => {
+                            bgImage === image.src ? '' : setBgImage(image.src) 
+                            bgImage === image.src ? setPropIn(false) : setPropIn(true)
+                            setNum(image.id)
+                        }} onMouseEnter={() => {
                             bgImage === image.src ? '' : setBgImage(image.src) 
                             bgImage === image.src ? setPropIn(false) : setPropIn(true)
                             setNum(image.id)

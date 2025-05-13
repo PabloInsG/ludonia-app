@@ -16,12 +16,11 @@ export const Menu = (props) => {
     <>
         <button 
         onClick={() => setMenuOpened(!menuOpened)}
-        className='z-20 fixed top-12  right-12 p-3 bg-black w-11 h-11 rounded-md'>
-            <div className={`bg-white h-0.5 rounded-md w-full transition-all ${menuOpened ? "rotate-45 translate-y-0.5" : ""}`}></div>
-            <div className={`bg-white h-0.5 rounded-md w-full transition-all my-1 ${menuOpened ? "hidden" : ""}`}></div>
-            <div className={`bg-white h-0.5 rounded-md w-full transition-all ${menuOpened ? "-rotate-45" : ""}`}></div>
+        className={`z-20 ${menuOpened ? "fixed" : "absolute"} top-12 right-12 lg:right-72 p-3 bg-white w-11 h-11 rounded-md `}>
+            <div className={`bg-[#091f92] h-1 mb-1 w-full transition-all ${menuOpened ? "rotate-45 translate-y-1 rounded-md" : ""}`}></div>
+            <div className={`bg-[#091f92] h-1 w-full transition-all ${menuOpened ? "-rotate-45 -translate-y-1 rounded-md" : ""}`}></div>
         </button>
-        <div className={`z-10 fixed top-0 right-0 bottom-0 bg-blue-200 transition-all overflow-hidden justify-center flex flex-col ${menuOpened ? "w-96" : "w-0"}`}>
+        <div className={`z-10 fixed top-0 right-0 bottom-0 bg-blue-200 transition-all overflow-hidden justify-center flex flex-col ${menuOpened ? "lg:w-96 w-full" : "w-0"}`}>
           <MenuOption option="Libros" to="/libros"  />
           <MenuOption option="Canciones" to="/canciones/0-1" />
           <MenuOption option="Instrumentos" to="/instrumentos"  />

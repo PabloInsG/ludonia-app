@@ -1,45 +1,42 @@
-import animales from "../assets/animales.jpg"
-import frutas from "../assets/frutas.jpg"
-import cocodrilo from "../assets/cocodrilo.jpg"
-import luna from "../assets/luna.jpg"
-import zapato from "../assets/zapato.jpg"
-import arbol from "../assets/arbol.jpg"
-import miau from "../assets/miau.jpg"
-import cinco from "../assets/cinco.jpg"
-
+import { useState } from "react";
+import { Logo } from "./Logo"
+import { Menu } from "./Menu"
 
 export const Libros = () => {
-    const librosMap = [
-        {id: 1, nombre: "Animales", foto: {animales}, url: "https://kalandraka.com/animales-castellano.html"},
-        {id: 2, nombre: "Frutas", foto: {frutas}, url: "a"},
-        {id: 3, nombre: "Cocodrilo", foto: {cocodrilo}, url: "a"},
-        {id: 4, nombre: "Luna", foto: {luna}, url: "a"},
-        {id: 5, nombre: "Zapato", foto: {zapato}, url: "a"},
-        {id: 6, nombre: "Arbol", foto: {arbol}, url: "a"},
-        {id: 7, nombre: "Miau", foto: {miau}, url: "a"},
-        {id: 8, nombre: "Cinco", foto: {cinco}, url: "a"}
-    ]
+    const [menu, setMenuOpened] = useState(false);
 
-    librosMap.map((l) => (
-        console.log(l.foto)
-    ))
+    const librosMap = [
+        {id: 1, nombre: "Animales", foto: "/src/assets/animales.jpg", url: "https://kalandraka.com/animales-castellano.html"},
+        {id: 2, nombre: "Frutas", foto: "/src/assets/frutas.jpg", url: "https://kalandraka.com/frutas-castellano.html"},
+        {id: 3, nombre: "Cocodrilo", foto: "/src/assets/cocodrilo.jpg", url: "https://kalandraka.com/cocodrilo-castellano.html"},
+        {id: 4, nombre: "Luna", foto: "/src/assets/luna.jpg", url: "https://kalandraka.com/luna-castellano.html"},
+        {id: 5, nombre: "Zapato", foto: "/src/assets/zapato.jpg", url: "https://kalandraka.com/zapato-castellano.html"},
+        {id: 6, nombre: "Arbol", foto: "/src/assets/arbol.jpg", url: "https://kalandraka.com/arbol-castellano.html"},
+        {id: 7, nombre: "Miau", foto: "/src/assets/miau.jpg", url: "https://kalandraka.com/miau-castellano.html"},
+        {id: 8, nombre: "Cinco", foto: "/src/assets/cinco.jpg", url: "https://kalandraka.com/cinco-castellano.html"}
+    ]
     
     return (
     <>
         <div className="w-full h-full flex flex-col items-center gap-y-8 bg-[#091F92]">
-            <h1 className="font-bold text-6xl text-white">LIBROS</h1>
-            <div className="w-8/12">
+            <Logo />
+            <div className="lg:w-8/12 w-11/12">
+                <h1 className="font-semibold text-5xl text-white">LIBROS</h1>
                 <h1>AQUI VA EL LIBRO DO RE MI</h1>
             </div>
-            <div className="grid grid-cols-4 w-8/12 gap-4 h-full mb-2">
-                {librosMap.map((_libro) => (
-                    <div key={_libro.id} className="text-white rounded-md bg-[#131313] flex flex-col">
-                        <a href={_libro.url} className="w-full h-full"><img src={_libro.foto} alt="" className="w-full h-full rounded-t-md" /></a>
-                        <h1 className="text-3xl p-2">{_libro.nombre}</h1>
-                    </div>
-                ))}
+            <div className="lg:w-8/12 w-11/12 flex flex-col gap-y-4">
+                <h1 className="text-start lg:text-4xl text-3xl font-semibold">Libros recomendados:</h1>
+                <div className="grid lg:grid-cols-4 w-full gap-4 h-full mb-4">
+                    {librosMap.map((_libro) => (
+                        <div key={_libro.id} className="text-[#091f92] font-bold text-center rounded-md bg-[#fff] flex flex-col hover:scale-[1.05] transition-all">
+                            <a href={_libro.url} target="_blank" className="w-full h-full"><img src={_libro.foto} alt="" className="w-full h-full rounded-t-md" /></a>
+                            <h1 className="text-3xl p-2">{_libro.nombre}</h1>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
+        <Menu menuOpened={menu} setMenuOpened={setMenuOpened} />
     </>
   )
 }
