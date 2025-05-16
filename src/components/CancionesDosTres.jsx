@@ -1,4 +1,4 @@
-import { CancionesComponent } from "./CancionesComponent"
+import { VideosComponent } from "./VideosComponent"
 
 export const CancionesDosTres = () => {
   const videosArray = [
@@ -11,7 +11,7 @@ export const CancionesDosTres = () => {
       <div className="flex flex-col lg:w-8/12 w-full h-full gap-y-4 p-2">
         <h1>Canciones 2-3 Años</h1>
         {videosArray.map((cancion) => (
-          <CancionesComponent key={cancion.nombre} nombre={cancion.nombre} link={cancion.link} />
+          <VideosComponent key={cancion.nombre} nombre={cancion.nombre} link={cancion.link} />
         ))}
       </div>
     </>

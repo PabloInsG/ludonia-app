@@ -8,6 +8,9 @@ import { Actividades } from '../components/Actividades'
 import { CancionesZeroUno } from '../components/CancionesZeroUno'
 import { CancionesUnoDos } from '../components/CancionesUnoDos'
 import { CancionesDosTres } from '../components/CancionesDosTres'
+import { ActividadesZeroUno } from '../components/ActividadesZeroUno'
+import { ActividadesUnoDos } from '../components/ActividadesUnoDos'
+import { ActividadesDosTres } from '../components/ActividadesDosTres'
 
 export const AppRouter = () => {
   return (
@@ -21,9 +24,9 @@ export const AppRouter = () => {
         </Route>
         <Route path="/instrumentos" element={<Instrumentos />} />
         <Route path="/actividades" element={<Actividades />}>
-          <Route path="0-1" element={<CancionesZeroUno />} />
-          <Route path="1-2" element={<CancionesUnoDos />} />
-          <Route path="2-3" element={<CancionesDosTres />} />
+          <Route path="0-1" element={<ActividadesZeroUno />} />
+          <Route path="1-2" element={<ActividadesUnoDos />} />
+          <Route path="2-3" element={<ActividadesDosTres />} />
         </Route>
         <Route path="*" element={<NotFound />} /> 
     </Routes>

@@ -24,7 +24,7 @@ export const Menu = (props) => {
           <MenuOption option="Libros" to="/libros"  />
           <MenuOption option="Canciones" to="/canciones/0-1" />
           <MenuOption option="Instrumentos" to="/instrumentos"  />
-          <MenuOption option="Actividades" to="/actividades" />
+          <MenuOption option="Actividades" to="/actividades/0-1" />
         </div>
     </>
   )

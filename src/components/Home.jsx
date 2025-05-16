@@ -19,15 +19,15 @@ export const Home = () => {
         { id: 1, src: `${libros}`, text: "Libros", link: "/libros" },
         { id: 2, src: `${canciones}`, text: "Canciones", link: "/canciones/0-1" },
         { id: 3, src: `${instrumentos}`, text: "Instrumentos", link: "/instrumentos" },
-        { id: 4, src: `${actividades}`, text: "Actividades", link: "/actividades" },
+        { id: 4, src: `${actividades}`, text: "Actividades", link: "/actividades/0-1" },
     ]
   return (
     <>
-        <div className="fixed -z-10 flex w-full h-[100vh]">
+        <div className="fixed -z-10 flex w-full lg:h-[100vh] h-screen">
                     <div className="lg:w-1/3 w-0 flex flex-col justify-between lg:bg-[#091F92]">
                         <div className="!w-70 h-1/2 flex flex-col justify-center gap-y-2">
-                            <h1 className='text-8xl text-center text-white opacity-100'>LUDONÍA</h1>
-                            <p className='lg:text-center text-xl '>Donde el juego y la música crean magia.</p>
+                            <h1 className='xl:text-8xl text-center text-white opacity-100'>LUDONÍA</h1>
+                            <p className='text-center text-xl '>Donde el juego y la música crean magia.</p>
                         </div>
                         <div className="flex items-center ml-12 mb-10">
                             <div className="w-8">
@@ -42,14 +42,14 @@ export const Home = () => {
                         </div>
                     </div>
                     <CSSTransition nodeRef={targetRef} in={propIn} timeout={500} classNames={"my-node"}>
-                        <div ref={targetRef} className="lg:w-2/3 w-full lg:opacity-50" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
+                        <div ref={targetRef} className="lg:w-2/3 w-full opacity-50" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
                         </div>
                     </CSSTransition>
         </div>
-        <div className="z-20 lg:h-[100vh] items-center" id="example">
+        <div className="z-20 lg:h-[100vh] flex lg:flex-row flex-col h-screen items-center" id="example">
             <ReactLenis root="true" id="lenis" options={{ smooth: true, orientation: "horizontal",  }} >
                 {imgData.map((image) => (
-                    <Link className="link" key={image.id} to={image.link} >
+                    <Link className="link xl:text-3xl text-xl" key={image.id} to={image.link} >
                         <h1 className={bgImage === image.src ? 'textHover hover:scale-105 transition duration-700' : 'textNormal hover:scale-105 transition duration-700'} onTouchStart={() => {
                             bgImage === image.src ? '' : setBgImage(image.src) 
                             bgImage === image.src ? setPropIn(false) : setPropIn(true)
@@ -102,8 +102,6 @@ function StyleSheet() {
             margin-left: 70px;
             align-items: center;
             text-decoration: none;
-            font-family: "Azeret Mono", monospace;
-            font-size: 27px;
             font-weight: 600;
             letter-spacing: -3px;
             line-height: 1.2;

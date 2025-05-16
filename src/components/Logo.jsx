@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
+import { Menu } from "./Menu"
+import { useState } from "react";
 
 export const Logo = () => {
+  const [menu, setMenuOpened] = useState(false);
   return (
     <>
     <div className="lg:w-8/12 w-11/12 py-4 lg:bg-[#091F92]">
@@ -10,6 +13,7 @@ export const Logo = () => {
                 <p className='text-center text-xl '>Donde el juego y la música crean magia.</p>
             </Link>
         </div>
+        <Menu menuOpened={menu} setMenuOpened={setMenuOpened} />
     </div>
 </>
   )

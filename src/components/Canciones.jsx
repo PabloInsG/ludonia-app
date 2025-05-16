@@ -1,10 +1,7 @@
 import { Link, Outlet } from "react-router-dom"
-import { Menu } from "./Menu"
-import { useState } from "react";
 import { Logo } from "./Logo";
 
 export const Canciones = () => {
-  const [menu, setMenuOpened] = useState(false);
 
   return (
     <>
@@ -17,7 +14,6 @@ export const Canciones = () => {
         </div>
           <Outlet/>
       </div>
-      <Menu menuOpened={menu} setMenuOpened={setMenuOpened} />
     </>
   )
 }
