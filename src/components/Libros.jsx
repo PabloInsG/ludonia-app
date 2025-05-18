@@ -26,7 +26,7 @@ export const Libros = () => {
     <>
         <div className="w-full h-full flex flex-col items-center gap-y-8 bg-[#091F92]">
             <Logo />
-            <div className="lg:w-8/12 w-11/12">
+            <div className="lg:w-8/12 w-11/12 flex flex-col lg:h-[700px]">
                 <h1 className="">Libros</h1>
                 <LibroDoReMi />
             </div>

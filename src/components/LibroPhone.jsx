@@ -34,6 +34,10 @@ export const LibroPhone = () => {
             <div className="demoPage bg-[#0091ed]"></div>
             <div className="demoPage"><img src={contraportada} /></div>
         </HTMLFlipBook>
+        <div className="flex justify-around w-full mt-4">
+            <button className="botonLibro font-semibold rounded-md p-2" onClick={() => libro.current.pageFlip().flipPrev()}>Anterior Pagina</button>
+            <button className="botonLibro font-semibold rounded-md p-2" onClick={() => libro.current.pageFlip().flipNext()}>Siguiente Pagina</button>
+        </div>
     </>
   )
 }
