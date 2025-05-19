@@ -36,7 +36,7 @@ export const Home = () => {
             <div ref={targetRef} className="lg:w-2/3 w-full opacity-50 h-full fixed right-0 -z-20" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
             </div>
         </CSSTransition>
-        <div className="z-20 lg:h-[100vh] h-screen flex lg:flex-row flex-col items-center justify-evenly w-full" id="example">
+        <div className="z-20 lg:h-[100vh] flex lg:flex-row flex-col items-center h-1/2 justify-evenly w-full" id="example">
             <ReactLenis root="true" id="lenis" options={{ smooth: true, orientation: "horizontal",  }} >
                 {imgData.map((image) => (
                     <Link className="link lg:m-20 xl:text-3xl text-md" key={image.id} to={image.link} >
