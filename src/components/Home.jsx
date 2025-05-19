@@ -26,7 +26,7 @@ export const Home = () => {
     <div className="flex flex-col h-screen">
         <div className="lg:fixed -z-10 flex w-full lg:h-[100vh]">
                     <div className="lg:w-1/3 w-full flex flex-col justify-between lg:bg-[#091F92]">
-                        <div className="lg:w-70 w-full h-1/2 flex flex-col lg:justify-center gap-y-2 mt-2">
+                        <div className="lg:w-70 w-full lg:h-1/2 h-full flex flex-col lg:justify-center gap-y-2 mt-2">
                             <h1 className='xl:text-8xl text-center text-white opacity-100'>LUDONÍA</h1>
                             <p className='text-center text-xl'>Donde el juego y la música crean magia.</p>
                         </div>
@@ -55,7 +55,7 @@ export const Home = () => {
                 <StyleSheet />
             </ReactLenis>
         </div>
-        <div className="flex fixed bottom-2 items-center ml-4 lg:ml-12 mb-10">
+        <div className="lg:flex bottom-4 lg:fixed hidden items-center ml-4 lg:ml-20 mb-10">
             <div className="w-8">
             <h1 className='text-sm p-2'>0{num}</h1>
             </div>
