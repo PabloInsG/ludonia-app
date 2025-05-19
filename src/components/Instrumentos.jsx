@@ -28,13 +28,13 @@ export const Instrumentos = () => {
           <div className="flex flex-col bg-white rounded-md w-full gap-x-4 p-4 text-[#091f92] gap-y-2">
             <Carousel showIndicators={false} showThumbs={false} autoPlay={true} infiniteLoop={true} showStatus={false} interval={3500}>
                 <div>
-                    <img src={tambor1} className="lg:h-[550px]" />
+                    <img src={tambor1} className="lg:h-[550px]" alt="Ejemplo tambor 1" />
                 </div>
                 <div>
-                    <img src={tambor2} className="lg:h-[550px]" />
+                    <img src={tambor2} className="lg:h-[550px]" alt="Ejemplo tambor 2" />
                 </div>
                 <div>
-                    <img src={tambor3} className="lg:h-[550px]" />
+                    <img src={tambor3} className="lg:h-[550px]" alt="Ejemplo tambor 3" />
                 </div>
             </Carousel>
             <p className="text-xl lg:text-3xl font-semibold">Tambor</p>
