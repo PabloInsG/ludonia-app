@@ -9,7 +9,7 @@ export const CancionesZeroUno = () => {
   return (
     <>
       <div className="flex flex-col lg:w-8/12 w-full h-full gap-y-4 p-2">
-        <h1>Canciones 0-1 Años</h1>
+        <h1 className="text-4xl lg:text-5xl font-semibold">Canciones 0-1 Años</h1>
         {videosArray.map((cancion) => (
           <VideosComponent key={cancion.nombre} nombre={cancion.nombre} link={cancion.link} />
         ))}

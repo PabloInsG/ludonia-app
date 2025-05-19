@@ -4,6 +4,8 @@ import { VideosComponent } from "./VideosComponent";
 import tambor1 from "../assets/tambor1.jpeg"
 import tambor2 from "../assets/tambor2.jpeg"
 import tambor3 from "../assets/tambor3.jpeg"
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import { Carousel } from "react-responsive-carousel";
 
 export const Instrumentos = () => {
 
@@ -19,29 +21,23 @@ export const Instrumentos = () => {
       <div className="w-full h-full flex flex-col items-center gap-y-8 bg-[#091F92]">
         <Logo />
         <div className="flex flex-col lg:w-8/12 w-full h-full gap-y-4 p-2">
-          <h1 className="text-4xl">Instrumentos Caseros</h1>
+          <h1 className="text-4xl lg:text-5xl font-semibold">Instrumentos Caseros</h1>
           {videosArray.map((video) => (
             <VideosComponent key={video.nombre} nombre={video.nombre} link={video.link} />
           ))}
-          <div className="flex flex-col bg-white rounded-md w-full gap-x-4 p-4 text-[#091f92]">
-            <div className="flex lg:flex-row justify-between gap-x-2">
-              <img 
-                src={tambor1} 
-                className="h-[550px] w-full"
-                alt="Foto de un Tambor" 
-              />
-              <img 
-                src={tambor2} 
-                className="h-[550px] w-full" 
-                alt="Foto de un Tambor" 
-              />
-              <img 
-                src={tambor3} 
-                className="h-[550px] w-full" 
-                alt="Foto de un Tambor" 
-              />
-            </div>
-            <p className="text-3xl">Tambor</p>
+          <div className="flex flex-col bg-white rounded-md w-full gap-x-4 p-4 text-[#091f92] gap-y-2">
+            <Carousel showIndicators={false} showThumbs={false} autoPlay={true} infiniteLoop={true} showStatus={false} interval={3500}>
+                <div>
+                    <img src={tambor1} className="lg:h-[550px]" />
+                </div>
+                <div>
+                    <img src={tambor2} className="lg:h-[550px]" />
+                </div>
+                <div>
+                    <img src={tambor3} className="lg:h-[550px]" />
+                </div>
+            </Carousel>
+            <p className="text-xl lg:text-3xl font-semibold">Tambor</p>
           </div>
         </div>
       </div>
