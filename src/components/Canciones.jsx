@@ -1,7 +1,15 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useNavigate } from "react-router-dom"
 import { Logo } from "./Logo";
+import { useEffect } from "react";
 
 export const Canciones = () => {
+  const navegar = useNavigate()
+
+  useEffect(() => {
+    if (window.location.href.endsWith("canciones") || window.location.href.endsWith("canciones/")) {
+      navegar("0-1")
+    }
+  }, [])
 
   return (
     <>

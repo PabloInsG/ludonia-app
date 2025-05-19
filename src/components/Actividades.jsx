@@ -1,7 +1,19 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useNavigate } from "react-router-dom"
 import { Logo } from "./Logo";
+import { useEffect } from "react";
 
 export const Actividades = () => {
+  const navegar = useNavigate();
+
+  const regExp = new RegExp(/actividades\/(?:(?!0-1|1-2|2-3).)*/g)
+
+  useEffect(() => {
+      if (window.location.href.matchAll(regExp)) {
+        navegar("0-1")
+      }
+    }, [])
+
+
   return (
     <>
       <div className="bg-[#091F92] h-full items-center flex flex-col">

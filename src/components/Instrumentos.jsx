@@ -19,7 +19,7 @@ export const Instrumentos = () => {
       <div className="w-full h-full flex flex-col items-center gap-y-8 bg-[#091F92]">
         <Logo />
         <div className="flex flex-col lg:w-8/12 w-full h-full gap-y-4 p-2">
-          <h1>Instrumentos Caseros</h1>
+          <h1 className="text-4xl">Instrumentos Caseros</h1>
           {videosArray.map((video) => (
             <VideosComponent key={video.nombre} nombre={video.nombre} link={video.link} />
           ))}

@@ -8,7 +8,7 @@ export const ActividadesZeroUno = () => {
   return (
     <>
       <div className="flex flex-col lg:w-8/12 w-full h-full gap-y-4 p-2">
-        <h1>Actividades 0-1 Años</h1>
+        <h1 className="text-4xl">Actividades 0-1 Años</h1>
         {videosArray.map((actividad) => (
           <VideosComponent key={actividad.nombre} nombre={actividad.nombre} link={actividad.link} />
         ))}
