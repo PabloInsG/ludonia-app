@@ -23,7 +23,7 @@ export const Home = () => {
     ]
   return (
     <>
-    <div className="">
+    <div className="flex flex-col h-screen">
         <div className="fixed -z-10 flex w-full lg:h-[100vh] h-full">
                     <div className="lg:w-1/3 w-full flex flex-col justify-between lg:bg-[#091F92]">
                         <div className="lg:w-70 w-full h-1/2 flex flex-col lg:justify-center gap-y-2 mt-2">
@@ -47,7 +47,7 @@ export const Home = () => {
             <div ref={targetRef} className="lg:w-2/3 w-full opacity-50 h-full fixed right-0 -z-20" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
             </div>
         </CSSTransition>
-        <div className="z-20 lg:h-[100vh] flex lg:flex-row flex-col h-screen items-center justify-evenly w-full" id="example">
+        <div className="z-20 lg:h-[100vh] flex lg:flex-row flex-col h-full items-center justify-evenly w-full" id="example">
             <ReactLenis root="true" id="lenis" options={{ smooth: true, orientation: "horizontal",  }} >
                 {imgData.map((image) => (
                     <Link className="link lg:m-20 xl:text-3xl text-md" key={image.id} to={image.link} >
