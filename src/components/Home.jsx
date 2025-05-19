@@ -24,7 +24,7 @@ export const Home = () => {
   return (
     <>
     <div className="flex flex-col h-screen">
-        <div className="lg:fixed -z-10 flex w-full lg:h-[100vh] h-1/6">
+        <div className="lg:fixed -z-10 flex w-full lg:h-[100vh] h-1/6 header">
             <div className="lg:w-1/3 w-full flex flex-col justify-between lg:bg-[#091F92]">
                 <div className="lg:w-70 w-full lg:h-1/2 h-full flex flex-col lg:justify-center gap-y-2 mt-2">
                     <h1 className='xl:text-8xl text-center text-white opacity-100'>LUDONÍA</h1>
@@ -111,6 +111,9 @@ function StyleSheet() {
         }
 
         @media (max-width: 450px) {
+        .header {
+            position: sticky;
+        }
          .link {
             width: 98vw;
             margin-left:4px;
