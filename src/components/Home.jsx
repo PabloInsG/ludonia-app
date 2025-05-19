@@ -23,23 +23,12 @@ export const Home = () => {
     ]
   return (
     <>
-    <div className="flex flex-col h-dvh">
-        <div className="lg:fixed -z-10 flex w-full lg:h-[100vh] h-full">
+    <div className="flex flex-col h-screen">
+        <div className="lg:fixed -z-10 flex w-full lg:h-[100vh]">
                     <div className="lg:w-1/3 w-full flex flex-col justify-between lg:bg-[#091F92]">
                         <div className="lg:w-70 w-full h-1/2 flex flex-col lg:justify-center gap-y-2 mt-2">
                             <h1 className='xl:text-8xl text-center text-white opacity-100'>LUDONÍA</h1>
                             <p className='text-center text-xl'>Donde el juego y la música crean magia.</p>
-                        </div>
-                        <div className="flex items-center ml-12 mb-10">
-                            <div className="w-8">
-                            <h1 className='text-sm p-2'>0{num}</h1>
-                            </div>
-                            <div className="">
-                                <hr className='w-16 h-px border-0 bg-yellow-900'></ hr>
-                            </div>
-                            <div className="w-8">
-                                <h1 className='text-sm p-2'>0{imgData.length}</h1>
-                            </div>
                         </div>
                     </div>
         </div>
@@ -47,7 +36,7 @@ export const Home = () => {
             <div ref={targetRef} className="lg:w-2/3 w-full opacity-50 h-full fixed right-0 -z-20" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
             </div>
         </CSSTransition>
-        <div className="z-20 posFixed lg:h-[100vh] flex lg:flex-row flex-col h-full items-center justify-evenly w-full" id="example">
+        <div className="z-20 lg:h-[100vh] h-screen flex lg:flex-row flex-col items-center justify-evenly w-full" id="example">
             <ReactLenis root="true" id="lenis" options={{ smooth: true, orientation: "horizontal",  }} >
                 {imgData.map((image) => (
                     <Link className="link lg:m-20 xl:text-3xl text-md" key={image.id} to={image.link} >
@@ -65,6 +54,17 @@ export const Home = () => {
                 ))}
                 <StyleSheet />
             </ReactLenis>
+        </div>
+        <div className="flex fixed bottom-2 items-center ml-4 lg:ml-12 mb-10">
+            <div className="w-8">
+            <h1 className='text-sm p-2'>0{num}</h1>
+            </div>
+            <div className="">
+                <hr className='w-16 h-px border-0 bg-yellow-900'></hr>
+            </div>
+            <div className="w-8">
+                <h1 className='text-sm p-2'>0{imgData.length}</h1>
+            </div>
         </div>
     </div>
     </>
@@ -117,7 +117,7 @@ function StyleSheet() {
          }
 
          .posFixed {
-            position: fixed;
+            position: absolute;
          }
         }
 
