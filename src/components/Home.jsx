@@ -24,13 +24,13 @@ export const Home = () => {
   return (
     <>
     <div className="flex flex-col h-screen">
-        <div className="lg:fixed -z-10 flex w-full lg:h-[100vh]">
-                    <div className="lg:w-1/3 w-full flex flex-col justify-between lg:bg-[#091F92]">
-                        <div className="lg:w-70 w-full lg:h-1/2 h-full flex flex-col lg:justify-center gap-y-2 mt-2">
-                            <h1 className='xl:text-8xl text-center text-white opacity-100'>LUDONÍA</h1>
-                            <p className='text-center text-xl'>Donde el juego y la música crean magia.</p>
-                        </div>
-                    </div>
+        <div className="lg:fixed -z-10 flex w-full lg:h-[100vh] h-1/3">
+            <div className="lg:w-1/3 w-full flex flex-col justify-between lg:bg-[#091F92]">
+                <div className="lg:w-70 w-full lg:h-1/2 h-full flex flex-col lg:justify-center gap-y-2 mt-2">
+                    <h1 className='xl:text-8xl text-center text-white opacity-100'>LUDONÍA</h1>
+                    <p className='text-center text-xl'>Donde el juego y la música crean magia.</p>
+                </div>
+            </div>
         </div>
         <CSSTransition nodeRef={targetRef} in={propIn} timeout={500} classNames={"my-node"}>
             <div ref={targetRef} className="lg:w-2/3 w-full opacity-50 lg:h-full h-screen fixed right-0 -z-20" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
