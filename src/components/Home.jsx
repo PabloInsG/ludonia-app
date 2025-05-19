@@ -33,7 +33,7 @@ export const Home = () => {
                     </div>
         </div>
         <CSSTransition nodeRef={targetRef} in={propIn} timeout={500} classNames={"my-node"}>
-            <div ref={targetRef} className="lg:w-2/3 w-full opacity-50 h-full fixed right-0 -z-20" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
+            <div ref={targetRef} className="lg:w-2/3 w-full opacity-50 lg:h-full h-screen fixed right-0 -z-20" style={{backgroundImage: `url(${bgImage}) `, backgroundSize: "cover", backgroundPosition: "center"}}>
             </div>
         </CSSTransition>
         <div className="z-20 lg:h-[100vh] flex lg:flex-row flex-col items-center h-1/2 justify-evenly w-full" id="example">
