@@ -112,7 +112,8 @@ function StyleSheet() {
 
         @media (max-width: 450px) {
         .header {
-            position: sticky;
+            position: absolute;
+            top: 0;
         }
          .link {
             width: 98vw;
