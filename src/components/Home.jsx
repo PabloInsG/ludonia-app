@@ -23,7 +23,7 @@ export const Home = () => {
     ]
   return (
     <>
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-dvh">
         <div className="fixed -z-10 flex w-full lg:h-[100vh] h-full">
                     <div className="lg:w-1/3 w-full flex flex-col justify-between lg:bg-[#091F92]">
                         <div className="lg:w-70 w-full h-1/2 flex flex-col lg:justify-center gap-y-2 mt-2">
