@@ -75,9 +75,6 @@ export const Home = () => {
 function StyleSheet() {
     return (
         <style>{`
-        html {
-            scroll-snap-type: y mandatory;
-        }
 
         ::-webkit-scrollbar {
             display: none;
@@ -112,7 +109,6 @@ function StyleSheet() {
 
         @media (max-width: 450px) {
         .contentMobile {
-            margin-top: 200px;
         }
          .link {
             width: 98vw;
